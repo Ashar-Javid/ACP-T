@@ -1,0 +1,31 @@
+environment:
+	module: acpt.environments.multi_domain_environment
+	class: MultiDomainEnvironment
+	config:
+		delegates:
+			- name: ris
+				module: acpt.environments.ris_environment
+				class: RISEnvironment
+				agents:
+					- agent.ris
+				seed: 7
+				kwargs:
+					tile_count: 96
+					max_steps: 240
+			- name: noma
+				module: acpt.environments.noma_environment
+				class: NOMAEnvironment
+				agents:
+					- agent.noma
+				seed: 11
+				kwargs:
+					max_steps: 200
+			- name: v2i
+				module: acpt.environments.v2i_environment
+				class: V2IEnvironment
+				agents:
+					- agent.v2i
+				seed: 13
+				kwargs:
+					lane_count: 4
+					max_steps: 220

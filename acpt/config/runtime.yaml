@@ -1,0 +1,7 @@
+protocol_version: "acpt-1.0"
+default_llm:
+	model: "qwen-32b"
+	device: "cerebras"
+	infer_params:
+		max_tokens: 512
+		temperature: 0.0

@@ -1,0 +1,1 @@
+"""Configuration assets placeholder package."""

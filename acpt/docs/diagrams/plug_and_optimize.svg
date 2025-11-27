@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="320" viewBox="0 0 760 320">
+  <style>
+    .box { fill: #fafafa; stroke: #1a237e; stroke-width: 2; rx: 8; ry: 8; }
+    .arrow { stroke: #455a64; stroke-width: 2; marker-end: url(#arrowhead); fill: none; }
+    .label { font-family: Arial, sans-serif; font-size: 14px; fill: #263238; }
+    .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #0d47a1; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#455a64" />
+    </marker>
+  </defs>
+  <text x="380" y="30" text-anchor="middle" class="title">Plug-and-Optimize Pipeline</text>
+  <rect class="box" x="40" y="70" width="180" height="80" />
+  <text x="130" y="105" text-anchor="middle" class="label">Manifest Authoring</text>
+  <text x="130" y="125" text-anchor="middle" class="label">JSON + Schema</text>
+  <rect class="box" x="260" y="70" width="180" height="80" />
+  <text x="350" y="105" text-anchor="middle" class="label">Registrar CLI</text>
+  <text x="350" y="125" text-anchor="middle" class="label">add_agent / add_tool</text>
+  <rect class="box" x="480" y="70" width="180" height="80" />
+  <text x="570" y="105" text-anchor="middle" class="label">config/wiring.yaml</text>
+  <text x="570" y="125" text-anchor="middle" class="label">Standardized Records</text>
+  <rect class="box" x="300" y="200" width="180" height="80" />
+  <text x="390" y="235" text-anchor="middle" class="label">Registry &amp; Orchestrator</text>
+  <text x="390" y="255" text-anchor="middle" class="label">Runtime Discovery</text>
+  <rect class="box" x="520" y="200" width="180" height="80" />
+  <text x="610" y="235" text-anchor="middle" class="label">Agents / Tools / KB</text>
+  <text x="610" y="255" text-anchor="middle" class="label">Activated Components</text>
+  <line class="arrow" x1="220" y1="110" x2="260" y2="110" />
+  <line class="arrow" x1="440" y1="110" x2="480" y2="110" />
+  <line class="arrow" x1="570" y1="150" x2="570" y2="200" />
+  <line class="arrow" x1="480" y1="240" x2="520" y2="240" />
+  <line class="arrow" x1="380" y1="200" x2="350" y2="150" />
+  <line class="arrow" x1="430" y1="150" x2="410" y2="200" />
+  <text x="240" y="95" text-anchor="middle" class="label">validate</text>
+  <text x="460" y="95" text-anchor="middle" class="label">write</text>
+  <text x="555" y="180" text-anchor="middle" class="label">load</text>
+  <text x="500" y="225" text-anchor="middle" class="label">discover</text>
+</svg>

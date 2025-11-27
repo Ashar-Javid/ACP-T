@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360">
+  <style>
+    .layer { fill:#eef4ff; stroke:#2e4c9f; stroke-width:2; rx:10; ry:10; }
+    .text { font-family:Arial, sans-serif; font-size:16px; fill:#1b2f59; }
+    .arrow { stroke:#2e4c9f; stroke-width:2; marker-end:url(#arrowhead); fill:none; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#2e4c9f"/>
+    </marker>
+  </defs>
+  <rect class="layer" x="40" y="30" width="200" height="70"/>
+  <text class="text" x="140" y="70" text-anchor="middle">Local Agent</text>
+
+  <rect class="layer" x="260" y="30" width="200" height="70"/>
+  <text class="text" x="360" y="70" text-anchor="middle">Tool Layer</text>
+  <text class="text" x="360" y="95" text-anchor="middle">(Solvers &amp; Predictors)</text>
+
+  <rect class="layer" x="480" y="30" width="200" height="70"/>
+  <text class="text" x="580" y="65" text-anchor="middle">Coordinator</text>
+
+  <rect class="layer" x="40" y="150" width="200" height="70"/>
+  <text class="text" x="140" y="190" text-anchor="middle">Agent KB</text>
+
+  <rect class="layer" x="260" y="150" width="200" height="70"/>
+  <text class="text" x="360" y="185" text-anchor="middle">KB Manager</text>
+  <text class="text" x="360" y="210" text-anchor="middle">(File-backed RAG)</text>
+
+  <rect class="layer" x="480" y="150" width="200" height="70"/>
+  <text class="text" x="580" y="190" text-anchor="middle">Global KB</text>
+
+  <rect class="layer" x="260" y="260" width="200" height="70"/>
+  <text class="text" x="360" y="295" text-anchor="middle">Tools Registry</text>
+
+  <line class="arrow" x1="240" y1="65" x2="260" y2="65"/>
+  <text class="text" x="250" y="55" text-anchor="middle">use_tool()</text>
+
+  <line class="arrow" x1="460" y1="65" x2="480" y2="65"/>
+  <text class="text" x="470" y="55" text-anchor="middle">aggregate()</text>
+
+  <line class="arrow" x1="140" y1="220" x2="360" y2="220"/>
+  <text class="text" x="250" y="240" text-anchor="middle">retrieve()</text>
+
+  <line class="arrow" x1="360" y1="220" x2="580" y2="220"/>
+  <text class="text" x="470" y="240" text-anchor="middle">sync()</text>
+
+  <line class="arrow" x1="360" y1="260" x2="360" y2="220"/>
+  <text class="text" x="376" y="250">tools</text>
+</svg>

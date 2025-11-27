@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="320" viewBox="0 0 560 320">
+  <style>
+    .layer { fill:#e6f0ff; stroke:#3052a1; stroke-width:2; }
+    .text { font-family:Arial, sans-serif; font-size:16px; fill:#1c2a48; }
+  </style>
+  <rect class="layer" x="40" y="20" width="480" height="60" rx="8"/>
+  <text class="text" x="280" y="55" text-anchor="middle">Coordinator (LLM + Metric Programmable)</text>
+  <rect class="layer" x="40" y="100" width="220" height="60" rx="8"/>
+  <text class="text" x="150" y="135" text-anchor="middle">Local Agent (LLM)</text>
+  <rect class="layer" x="300" y="100" width="220" height="60" rx="8"/>
+  <text class="text" x="410" y="135" text-anchor="middle">Shared KB / RAG</text>
+  <rect class="layer" x="40" y="180" width="220" height="60" rx="8"/>
+  <text class="text" x="150" y="215" text-anchor="middle">Tools (Solvers &amp; Predictors)</text>
+  <rect class="layer" x="300" y="180" width="220" height="60" rx="8"/>
+  <text class="text" x="410" y="215" text-anchor="middle">Telemetry / Metrics</text>
+  <rect class="layer" x="40" y="260" width="480" height="40" rx="8"/>
+  <text class="text" x="280" y="287" text-anchor="middle">Environment (NR / Terahertz Simulators)</text>
+</svg>

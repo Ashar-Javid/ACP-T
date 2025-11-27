@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ACP-T JSON-RPC Message",
+  "type": "object",
+  "required": ["jsonrpc", "method", "cid"],
+  "properties": {
+    "jsonrpc": {
+      "type": "string",
+      "const": "2.0",
+      "description": "JSON-RPC protocol version"
+    },
+    "id": {
+      "type": ["string", "number", "null"],
+      "description": "Client-supplied identifier"
+    },
+    "cid": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Correlation identifier assigned by the coordinator"
+    },
+    "method": {
+      "type": "string",
+      "minLength": 5,
+      "description": "Namespaced method specifier"
+    },
+    "params": {
+      "type": ["object", "array", "string", "number", "boolean", "null"],
+      "description": "JSON-RPC parameters payload"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Optional transport metadata"
+    },
+    "protocol_version": {
+      "type": "string",
+      "description": "ACP-T protocol version for routing"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360">
+  <style>
+    .layer { fill:#f1f6ff; stroke:#2b4b9e; stroke-width:2; rx:12; ry:12; }
+    .text { font-family:Arial, sans-serif; font-size:16px; fill:#1d2d4f; }
+    .arrow { stroke:#2b4b9e; stroke-width:2; marker-end:url(#arrowhead); fill:none; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#2b4b9e"/>
+    </marker>
+  </defs>
+  <rect class="layer" x="40" y="40" width="160" height="70"/>
+  <text class="text" x="120" y="75" text-anchor="middle">Event Loop</text>
+
+  <rect class="layer" x="240" y="40" width="160" height="70"/>
+  <text class="text" x="320" y="70" text-anchor="middle">RAT Modules</text>
+  <text class="text" x="320" y="95" text-anchor="middle">mmWave / sub-6</text>
+
+  <rect class="layer" x="440" y="40" width="160" height="70"/>
+  <text class="text" x="520" y="75" text-anchor="middle">Propagation</text>
+  <text class="text" x="520" y="95" text-anchor="middle">(Rician/Rayleigh)</text>
+
+  <rect class="layer" x="640" y="40" width="80" height="70"/>
+  <text class="text" x="680" y="75" text-anchor="middle">Adapters</text>
+
+  <rect class="layer" x="120" y="180" width="200" height="70"/>
+  <text class="text" x="220" y="215" text-anchor="middle">Toy NR Environment</text>
+
+  <rect class="layer" x="380" y="180" width="200" height="70"/>
+  <text class="text" x="480" y="205" text-anchor="middle">Observations</text>
+  <text class="text" x="480" y="230" text-anchor="middle">(SNR / pos / energy)</text>
+
+  <rect class="layer" x="40" y="290" width="320" height="50"/>
+  <text class="text" x="200" y="322" text-anchor="middle">Agents / Controller</text>
+
+  <rect class="layer" x="400" y="290" width="320" height="50"/>
+  <text class="text" x="560" y="322" text-anchor="middle">Protocol Manager / Registry</text>
+
+  <line class="arrow" x1="200" y1="110" x2="240" y2="110"/>
+  <line class="arrow" x1="400" y1="110" x2="440" y2="110"/>
+  <line class="arrow" x1="600" y1="110" x2="640" y2="110"/>
+  <line class="arrow" x1="240" y1="215" x2="380" y2="215"/>
+  <line class="arrow" x1="220" y1="290" x2="220" y2="250"/>
+  <line class="arrow" x1="560" y1="290" x2="560" y2="250"/>
+
+  <text class="text" x="220" y="125" text-anchor="middle">config</text>
+  <text class="text" x="440" y="125" text-anchor="middle">channel params</text>
+  <text class="text" x="640" y="125" text-anchor="middle">API</text>
+  <text class="text" x="310" y="205" text-anchor="middle">step()</text>
+  <text class="text" x="230" y="270" text-anchor="middle">actions</text>
+  <text class="text" x="570" y="270" text-anchor="middle">observations</text>
+</svg>

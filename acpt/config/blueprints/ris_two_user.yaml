@@ -1,0 +1,27 @@
+environment:
+  module: acpt.environments.multi_domain_environment
+  class: MultiDomainEnvironment
+  config:
+    delegates:
+      - name: ris_two_user
+        module: acpt.environments.ris_environment
+        class: RISEnvironment
+        agents:
+          - agent.ris
+        kwargs:
+          user_count: 2
+          tile_count: 128
+          corridor_length: 80.0
+          corridor_width: 15.0
+          max_steps: 120
+        fading_models:
+          - channel_id: ris_user_0
+            type: rician
+            kwargs:
+              k_factor: 8.0
+              sigma: 1.0
+          - channel_id: ris_user_1
+            type: nakagami
+            kwargs:
+              m_factor: 1.8
+              omega: 1.3

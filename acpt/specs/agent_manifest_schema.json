@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ACP-T Agent Manifest",
+  "type": "object",
+  "required": ["id", "type", "llm_spec"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]+$",
+      "description": "Unique identifier for the registered component"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["agent", "coordinator", "tool"],
+      "description": "Category of the registered component"
+    },
+    "llm_spec": {
+      "type": "object",
+      "required": ["model", "device"],
+      "properties": {
+        "model": {"type": "string"},
+        "device": {"type": "string"},
+        "infer_params": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true,
+      "description": "LLM specification attached to the component"
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "List of advertised capabilities"
+    },
+    "rag_descriptor": {
+      "type": "object",
+      "required": ["index_type", "prefix"],
+      "properties": {
+        "index_type": {"type": "string"},
+        "prefix": {"type": "string"},
+        "metadata": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true,
+      "description": "RAG pointer configuration"
+    },
+    "module": {
+      "type": "string",
+      "description": "Python module providing the component implementation"
+    },
+    "version": {
+      "type": "string",
+      "description": "Component version identifier"
+    }
+  },
+  "additionalProperties": true
+}

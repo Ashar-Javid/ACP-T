@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: acpt
+Version: 0.1.0
+Summary: ACP-T runtime stack with LLM-aware agents
+Author: ACP-T Team
+License: Proprietary
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: jsonschema>=4.19
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4; extra == "dev"
+
+# ACP-T Runtime Stack
+
+Modular runtime for Adaptive Control Plane (ACP) experiments targeting 6G scenarios. The stack coordinates LLM-powered agents, tool adapters, and heterogeneous simulators via a programmable coordinator layer.
+
+## Repository Layout
+- `config/` – runtime, wiring, and environment templates consumed by the orchestrator.
+- `core/interfaces/` – abstract base classes for agents, coordinators, and tools.
+- `core/runtime/` – orchestrator, registry, and protocol management primitives.
+- `agents/` – LLM-aware agents (RIS, V2I, NOMA) plus coordinator scaffolding.
+- `environments/` – simulator facades (toy NR, terahertz, etc.).
+- `tools/` – solver and predictor adapters exposed to agents.
+- `utils/` – shared helpers (config loader, registrar utilities, logging, metrics).
+- `scripts/` – command-line utilities including the plug-and-register CLIs.
+- `examples/` – reference scenarios, e.g., RIS V2I NOMA demo wiring.
+- `tests/` – unit and integration coverage for core modules and CLIs.
+
+## Plug-and-Optimize CLI
+PR-7 introduces registrar-backed CLIs for onboarding new components:
+- `python scripts/add_agent.py --manifest ...` registers agents and optionally scaffolds single-file implementations.
+- `python scripts/add_tool.py --manifest ...` registers tool manifests and stubs.
+- `python scripts/add_kb_entry.py --id ...` appends documents to JSON knowledge stores and wires descriptors.
+
+See `docs/USAGE.md` for the end-to-end workflow and the new `plug_and_optimize.svg` diagram illustrating the manifest → wiring → registry → orchestrator flow.
+
+## Development Quickstart
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+pytest
+```
+
+Architecture diagrams reside in `docs/diagrams/`; JSON schemas live in `specs/` and govern manifest validation.

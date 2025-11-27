@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="320" viewBox="0 0 720 320">
+  <style>
+    .box { fill:#edf3ff; stroke:#2c4a9f; stroke-width:2; rx:10; ry:10; }
+    .text { font-family:Arial, sans-serif; font-size:16px; fill:#1d2d4f; }
+    .arrow { stroke:#2c4a9f; stroke-width:2; marker-end:url(#arrowhead); fill:none; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#2c4a9f"/>
+    </marker>
+  </defs>
+  <rect class="box" x="40" y="40" width="200" height="80"/>
+  <text class="text" x="140" y="80" text-anchor="middle">Toy NR Environment</text>
+
+  <rect class="box" x="280" y="40" width="160" height="80"/>
+  <text class="text" x="360" y="70" text-anchor="middle">RAT Models</text>
+  <text class="text" x="360" y="95" text-anchor="middle">(mmWave / sub-6)</text>
+
+  <rect class="box" x="480" y="40" width="200" height="80"/>
+  <text class="text" x="580" y="80" text-anchor="middle">Channel Metadata</text>
+
+  <rect class="box" x="40" y="180" width="200" height="80"/>
+  <text class="text" x="140" y="220" text-anchor="middle">Agent Actions</text>
+
+  <rect class="box" x="280" y="180" width="160" height="80"/>
+  <text class="text" x="360" y="210" text-anchor="middle">Propagation</text>
+  <text class="text" x="360" y="235" text-anchor="middle">(Large-Scale)</text>
+
+  <rect class="box" x="480" y="180" width="200" height="80"/>
+  <text class="text" x="580" y="220" text-anchor="middle">Observations</text>
+
+  <line class="arrow" x1="240" y1="80" x2="280" y2="80"/>
+  <line class="arrow" x1="440" y1="80" x2="480" y2="80"/>
+  <line class="arrow" x1="240" y1="220" x2="280" y2="220"/>
+  <line class="arrow" x1="440" y1="220" x2="480" y2="220"/>
+
+  <text class="text" x="260" y="70" text-anchor="middle">cfg</text>
+  <text class="text" x="460" y="70" text-anchor="middle">metadata()</text>
+  <text class="text" x="260" y="210" text-anchor="middle">delta</text>
+  <text class="text" x="460" y="210" text-anchor="middle">SNR / pos / energy</text>
+</svg>

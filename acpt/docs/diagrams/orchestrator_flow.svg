@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="320" viewBox="0 0 720 320">
+  <style>
+    .box { fill: #f5f5f5; stroke: #1a237e; stroke-width: 2; }
+    .arrow { stroke: #37474f; stroke-width: 2; marker-end: url(#arrowhead); fill: none; }
+    .label { font-family: Arial, sans-serif; font-size: 14px; fill: #1b1b1b; }
+    .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #0d47a1; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#37474f" />
+    </marker>
+  </defs>
+  <text x="360" y="30" text-anchor="middle" class="title">Coordinated Orchestrator Flow</text>
+  <rect class="box" x="40" y="70" width="160" height="80" rx="8"/>
+  <text x="120" y="110" text-anchor="middle" class="label">Registry</text>
+  <text x="120" y="130" text-anchor="middle" class="label">(Agents + Tools)</text>
+  <rect class="box" x="260" y="70" width="200" height="80" rx="8"/>
+  <text x="360" y="105" text-anchor="middle" class="label">Coordinator Agent</text>
+  <text x="360" y="125" text-anchor="middle" class="label">RAG + Metric Utility</text>
+  <rect class="box" x="520" y="70" width="160" height="80" rx="8"/>
+  <text x="600" y="105" text-anchor="middle" class="label">Environment</text>
+  <text x="600" y="125" text-anchor="middle" class="label">(Toy NR)</text>
+  <rect class="box" x="120" y="200" width="180" height="80" rx="8"/>
+  <text x="210" y="240" text-anchor="middle" class="label">Agent Proposals</text>
+  <rect class="box" x="420" y="200" width="180" height="80" rx="8"/>
+  <text x="510" y="230" text-anchor="middle" class="label">Actions &amp; Feedback</text>
+  <line class="arrow" x1="200" y1="110" x2="260" y2="110" />
+  <line class="arrow" x1="460" y1="110" x2="520" y2="110" />
+  <line class="arrow" x1="600" y1="150" x2="600" y2="200" />
+  <line class="arrow" x1="480" y1="200" x2="360" y2="150" />
+  <line class="arrow" x1="300" y1="200" x2="360" y2="150" />
+  <line class="arrow" x1="360" y1="150" x2="360" y2="200" />
+  <line class="arrow" x1="210" y1="200" x2="120" y2="150" />
+  <line class="arrow" x1="520" y1="240" x2="600" y2="240" />
+  <text x="230" y="180" text-anchor="middle" class="label">Observe</text>
+  <text x="360" y="180" text-anchor="middle" class="label">Metrics</text>
+  <text x="510" y="180" text-anchor="middle" class="label">Commit</text>
+  <text x="600" y="185" text-anchor="middle" class="label">Step</text>
+</svg>

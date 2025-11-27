@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360">
+  <style>
+    .box { fill:#f4f7ff; stroke:#2d4c9d; stroke-width:2; rx:12; ry:12; }
+    .text { font-family:Arial, sans-serif; font-size:16px; fill:#1d2d4f; }
+    .arrow { stroke:#2d4c9d; stroke-width:2; marker-end:url(#arrowhead); fill:none; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#2d4c9d"/>
+    </marker>
+  </defs>
+  <rect class="box" x="40" y="40" width="160" height="60"/>
+  <text class="text" x="120" y="75" text-anchor="middle">Observe</text>
+
+  <rect class="box" x="220" y="40" width="160" height="60"/>
+  <text class="text" x="300" y="70" text-anchor="middle">RAG Retrieve</text>
+
+  <rect class="box" x="400" y="40" width="160" height="60"/>
+  <text class="text" x="480" y="65" text-anchor="middle">Prompt Assembly</text>
+
+  <rect class="box" x="580" y="40" width="120" height="60"/>
+  <text class="text" x="640" y="75" text-anchor="middle">LLM</text>
+
+  <rect class="box" x="400" y="150" width="160" height="60"/>
+  <text class="text" x="480" y="180" text-anchor="middle">Tool Invocation</text>
+
+  <rect class="box" x="220" y="260" width="160" height="60"/>
+  <text class="text" x="300" y="295" text-anchor="middle">Propose Output</text>
+
+  <line class="arrow" x1="200" y1="70" x2="220" y2="70"/>
+  <text class="text" x="210" y="60" text-anchor="middle">context</text>
+
+  <line class="arrow" x1="380" y1="70" x2="400" y2="70"/>
+  <text class="text" x="390" y="60" text-anchor="middle">docs</text>
+
+  <line class="arrow" x1="560" y1="70" x2="580" y2="70"/>
+  <text class="text" x="570" y="60" text-anchor="middle">prompt</text>
+
+  <line class="arrow" x1="640" y1="100" x2="480" y2="150"/>
+  <text class="text" x="570" y="135" text-anchor="middle">guidance</text>
+
+  <line class="arrow" x1="480" y1="210" x2="300" y2="260"/>
+  <text class="text" x="390" y="250" text-anchor="middle">estimates</text>
+
+  <line class="arrow" x1="300" y1="100" x2="300" y2="260"/>
+  <text class="text" x="316" y="180">context</text>
+
+  <line class="arrow" x1="120" y1="100" x2="300" y2="260"/>
+  <text class="text" x="210" y="200" text-anchor="middle">state</text>
+</svg>

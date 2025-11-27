@@ -1,0 +1,43 @@
+environment:
+  module: acpt.environments.multi_domain_environment
+  class: MultiDomainEnvironment
+  config:
+    delegates:
+      - name: noma_uplink_cluster
+        module: acpt.environments.noma_environment
+        class: NOMAEnvironment
+        agents:
+          - agent.noma
+        kwargs:
+          pair_count: 2
+          max_steps: 180
+        fading_models:
+          - channel_id: noma_ue_far_0
+            type: nakagami
+            kwargs:
+              m_factor: 1.1
+              omega: 1.0
+          - channel_id: noma_ue_far_1
+            type: nakagami
+            kwargs:
+              m_factor: 1.4
+              omega: 1.1
+      - name: backscatter_tags
+        module: acpt.environments.backscatter_environment
+        class: BackscatterUplinkEnvironment
+        agents:
+          - agent.backscatter
+          - agent.noma
+        kwargs:
+          user_count: 2
+          tag_count: 2
+          max_steps: 180
+        fading_models:
+          - channel_id: backscatter_tag_0
+            type: rayleigh
+            kwargs:
+              sigma: 5.0
+          - channel_id: backscatter_tag_1
+            type: rayleigh
+            kwargs:
+              sigma: 4.0

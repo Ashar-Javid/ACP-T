@@ -1,0 +1,58 @@
+agents:
+	agent.ris:
+		module: acpt.agents.ris_agent
+		class: RISAgent
+		manifest:
+			id: agent.ris
+			llm_spec:
+				model: qwen-32b
+				device: cerebras
+				infer_params:
+					temperature: 0.0
+					max_tokens: 256
+	agent.v2i:
+		module: acpt.agents.v2i_agent
+		class: V2IAgent
+		manifest:
+			id: agent.v2i
+			llm_spec:
+				model: qwen-32b
+				device: cerebras
+				infer_params:
+					temperature: 0.1
+					max_tokens: 384
+	agent.noma:
+		module: acpt.agents.noma_agent
+		class: NOMAAgent
+		manifest:
+			id: agent.noma
+			llm_spec:
+				model: qwen-32b
+				device: cerebras
+				infer_params:
+					temperature: 0.05
+					max_tokens: 320
+coordinator:
+	module: acpt.agents.coordinator_agent
+	class: CoordinatorAgent
+	metrics:
+		energy: 0.4
+		fairness: 0.3
+		latency: 0.3
+tools:
+	- name: optimizer.ris_phase
+		module: acpt.tools.solvers.ris_phase_optimizer
+		class: RISPhaseOptimizer
+	- name: optimizer.manifold
+		module: acpt.tools.solvers.manifold_optimizer
+		class: ManifoldOptimizer
+	- name: allocator.power
+		module: acpt.tools.solvers.power_allocator
+		class: PowerAllocator
+	- name: predictor.gnn
+		module: acpt.tools.predictors.gnn_predictor
+		class: GNNPredictor
+	- name: solver.gradient_descent
+		module: acpt.tools.solvers.gd_solver
+		class: GradientDescentSolver
+knowledge: {}

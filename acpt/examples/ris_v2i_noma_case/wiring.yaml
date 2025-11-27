@@ -1,0 +1,78 @@
+agents:
+  ris-01:
+    module: acpt.agents.ris_agent
+    class: RISAgent
+    manifest:
+      id: agent.ris
+      type: agent
+      llm_spec:
+        model: qwen-32b
+        device: cerebras
+        infer_params:
+          temperature: 0.0
+          max_tokens: 256
+      rag_descriptor:
+        index_type: file
+        path: data/kb/ris-01.json
+        prefix: data/kb/ris-01.json
+  v2i-01:
+    module: acpt.agents.v2i_agent
+    class: V2IAgent
+    manifest:
+      id: agent.v2i
+      type: agent
+      llm_spec:
+        model: qwen-32b
+        device: cerebras
+        infer_params:
+          temperature: 0.1
+          max_tokens: 384
+      rag_descriptor:
+        index_type: file
+        path: data/kb/v2i-01.json
+        prefix: data/kb/v2i-01.json
+  noma-01:
+    module: acpt.agents.noma_agent
+    class: NOMAAgent
+    manifest:
+      id: agent.noma
+      type: agent
+      llm_spec:
+        model: qwen-32b
+        device: cerebras
+        infer_params:
+          temperature: 0.05
+          max_tokens: 320
+      rag_descriptor:
+        index_type: file
+        path: data/kb/noma-01.json
+        prefix: data/kb/noma-01.json
+
+coordinator:
+  module: acpt.agents.coordinator_agent
+  class: CoordinatorAgent
+  manifest:
+    id: coordinator.main
+    type: coordinator
+    llm_spec:
+      model: qwen-32b
+      device: cerebras
+      infer_params:
+        temperature: 0.0
+        max_tokens: 128
+    rag_descriptor:
+      index_type: file
+      path: data/kb/coordinator.json
+      prefix: data/kb/coordinator.json
+  metrics:
+    energy: 0.5
+    fairness: 0.3
+    latency: 0.2
+
+tools:
+  - name: solver.gradient_descent
+    module: acpt.tools.solvers.gd_solver
+    class: GradientDescentSolver
+  - name: predictor.gnn
+    module: acpt.tools.predictors.gnn_predictor
+    class: GNNPredictor

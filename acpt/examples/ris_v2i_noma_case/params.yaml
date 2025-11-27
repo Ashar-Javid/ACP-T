@@ -1,0 +1,22 @@
+experiment:
+  name: ris_v2i_noma_baseline
+  description: Baseline configuration for RIS/V2I/NOMA coordination loop.
+  steps: 10
+  metrics:
+    - energy
+    - throughput
+    - fairness
+    - latency
+    - handoff_success
+  results_path: results.jsonl
+  coordinator_metrics:
+    energy: 0.5
+    fairness: 0.3
+    latency: 0.2
+  orchestrator:
+    wiring: wiring.yaml
+    environment: env_config.yaml
+    coordinator: coordinator.main
+  notes:
+    - Update metrics weights to reflect experiment objectives.
+    - Run `python examples/ris_v2i_noma_case/run_demo.py` to generate telemetry.

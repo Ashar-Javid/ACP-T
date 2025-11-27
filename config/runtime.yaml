@@ -1,0 +1,11 @@
+protocol_version: acpt-1.0
+default_llm:
+  model: qwen-32b
+  provider: cerebras
+  device: cerebras
+  infer_params:
+    temperature: 0.0
+    max_tokens: 256
+knowledge_base:
+  index_type: file
+  path: data/knowledge/default.json
