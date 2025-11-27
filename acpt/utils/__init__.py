@@ -39,6 +39,7 @@ from .serialization import (
 	to_json,
 	to_msgpack,
 )
+from .visualization import visualize_ris_state
 
 __all__ = [
 	"ConfigError",
@@ -78,4 +79,5 @@ __all__ = [
 	"validate_manifest",
 	"to_json",
 	"to_msgpack",
+	"visualize_ris_state",
 ]

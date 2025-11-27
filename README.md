@@ -44,6 +44,7 @@ pip install -r requirements.txt
 - Edit `config/default.yaml` to set global flags.
 - Override agent or environment parameters via `config/agent_config.yaml` and `config/environment_config.yaml`.
 - Any new adapter or agent must be registered in `core/registry.py` so it can be discovered at runtime.
+- See `docs/environment_recipes.md` for ready-made commands and patterns to mix RIS/NOMA/V2I environments, change fading models, and scale user populations.
 
 ## Running Experiments
 ```powershell
