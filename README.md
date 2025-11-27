@@ -69,6 +69,19 @@ Add new tests beside the modules they cover (e.g., `tests/core/test_protocol_man
 3. Run `pytest` and linting before opening a PR.
 4. Submit the PR for review following the repository guidelines.
 
+## Citation
+If this project supports your research, please cite the upcoming IEEE Network Magazine article using the entry below:
+
+```bibtex
+@article{javid2026acpt,
+	title        = {ACP-T: An Agentic Communication Protocol for Dynamic Resource Coordination in Multi-Layer Telecom Networks},
+	author       = {Javid, Muhammad Ashar and others},
+	journal      = {IEEE Network Magazine},
+	year         = {2026},
+	note         = {IEEE Communications Society | In Preparation}
+}
+```
+
 ## Support
 - File issues or feature requests via GitHub Issues.
 - For adapter-specific problems, include simulator versions and configuration snippets for reproducibility.
